@@ -36,3 +36,7 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/trusty-backend:latest
+        
+      - name: Trigger deploy on Render
+        run: |
+          curl -X POST https://api.render.com/deploy/srv-d1a0mi2dbo4c73c0a99g?key=${{ secrets.RENDER_DEPLOY_HOOK }}        
