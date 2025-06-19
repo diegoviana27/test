@@ -39,4 +39,4 @@ jobs:
         
       - name: Trigger deploy on Render
         run: |
-          curl -X POST https://api.render.com/deploy/srv-d1a0mi2dbo4c73c0a99g?key=${{ secrets.RENDER_DEPLOY_HOOK }}        
+          curl -X POST https://api.render.com/deploy/srv-d1a6h315pdvs73ahd8c0?key=${{ secrets.RENDER_DEPLOY_HOOK }}        
