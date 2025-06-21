@@ -3,6 +3,16 @@ app = "trusty-backend"
 [env]
 PORT = "8080"
 
+[mount]
+  size = "1GB"  # opcional, se usar volume
+
+[env]
+  JAVA_OPTS = "-Xmx512m -Xms256m"
+
+[deploy]
+  memory = "512MB"
+
+
 [[services]]
   internal_port = 8080  # <- Corrigido aqui
   protocol = "tcp"
