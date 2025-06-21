@@ -1,0 +1,17 @@
+app = "trusty-backend"
+
+[env]
+PORT = "8080"
+JAVA_OPTS = "-Xmx512m -Xms512m"
+
+[[services]]
+  internal_port = 8080  # <- Corrigido aqui
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = [ "http" ]
+    port = 80
+
+  [[services.ports]]
+    handlers = [ "tls", "http" ]
+    port = 443
