@@ -1,14 +1,16 @@
-# Etapa 1: Build com Gradle
-FROM gradle:8.5-jdk17 AS build
-COPY --chown=gradle:gradle . /home/gradle/project
-WORKDIR /home/gradle/project
+FROM gradle:8.7.0-jdk21 AS build
+
+COPY --chown=gradle:gradle . /home/gradle/src
+
+WORKDIR /home/gradle/src
+
 RUN gradle build --no-daemon
 
-# Etapa 2: Runtime
-FROM eclipse-temurin:17-jdk-jammy
+FROM eclipse-temurin:21-jdk-alpine
 
-VOLUME /tmp
-COPY --from=build /home/gradle/project/build/libs/*.jar app.jar
+COPY --from=build /home/gradle/src/build/libs/*.jar /app/app.jar
+
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+
