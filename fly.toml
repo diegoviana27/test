@@ -2,7 +2,7 @@ app = "trusty-backend"
 
 [env]
 PORT = "8080"
-JAVA_OPTS = "-Xmx320m -Xms320m -XX:MaxMetaspaceSize=64m -XX:+UseContainerSupport"
+JAVA_OPTS = "-Xmx256m -Xms128m -XX:MaxMetaspaceSize=64m -XX:+UseContainerSupport"
 
 [[services]]
   internal_port = 8080  # <- Corrigido aqui
