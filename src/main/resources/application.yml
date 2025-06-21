@@ -7,12 +7,6 @@ spring:
     username: ${DATASOURCE_USERNAME:postgres}
     password: ${DATASOURCE_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
-    hikari:
-      maximum-pool-size: 10
-      minimum-idle: 2
-      idle-timeout: 30000
-      max-lifetime: 60000
-      leak-detection-threshold: 30000
 
   mail:
     host: ${MAIL_HOST}
