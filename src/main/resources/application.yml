@@ -2,18 +2,18 @@ spring:
   application:
     name: Trusty Audit Paperless System
 
-  datasource:
-    # URL dinâmica: se não definir DATASOURCE_URL, usa H2 em memória
-    url: jdbc:h2:mem:trustydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: 
-    driver-class-name: org.h2.Driver
-    hikari:
-      maximum-pool-size: 5
-      minimum-idle: 2
-      idle-timeout: 30000
-      max-lifetime: 1800000
-      leak-detection-threshold: 10000
+#  datasource:
+#    # URL dinâmica: se não definir DATASOURCE_URL, usa H2 em memória
+#    url: jdbc:h2:mem:trustydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#    hikari:
+#      maximum-pool-size: 5
+#      minimum-idle: 2
+#      idle-timeout: 30000
+#      max-lifetime: 1800000
+#      leak-detection-threshold: 10000
 
   mail:
     host: ${MAIL_HOST}
@@ -27,10 +27,10 @@ spring:
           starttls:
             enable: true
 
-  flyway:
-    enabled: false
-    locations: classpath:db/migration
-    schemas: trusty
+#  flyway:
+#    enabled: false
+#    locations: classpath:db/migration
+#    schemas: trusty
 
 server:
   address: 0.0.0.0
