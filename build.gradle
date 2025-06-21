@@ -8,6 +8,10 @@ group = 'com.exemplo'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+ext {
+	logstashVersion = '7.4'
+}
+
 repositories {
 	mavenCentral()
 }
