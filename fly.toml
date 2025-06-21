@@ -2,7 +2,7 @@ app = "trusty-backend"
 
 
 [env]
-  JAVA_OPTS = "-Xmx512m"
+  JAVA_OPTS = "-Xmx768m"
 
 [experimental]
   auto_rollback = true
