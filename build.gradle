@@ -31,7 +31,7 @@ dependencies {
 
 	implementation 'com.google.cloud.sql:postgres-socket-factory:1.13.0'
 
-	implementation "net.logstash.logback:logstash-logback-encoder:${logstashVersion}"
+	//implementation "net.logstash.logback:logstash-logback-encoder:${logstashVersion}"
 
 	implementation 'org.flywaydb:flyway-core:9.20.0'
 	implementation 'org.postgresql:postgresql:42.7.2'
