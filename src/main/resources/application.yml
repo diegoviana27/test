@@ -31,11 +31,11 @@ spring:
     locations: classpath:db/migration
     schemas: trusty
 
-server:
-  address: 0.0.0.0
-  port: ${PORT:8080}
-  servlet:
-    context-path: /api
+#server:
+##  address: 0.0.0.0
+##  port: ${PORT:8080}
+#  servlet:
+#    context-path: /api
 
 jwt:
   secret: ${JWT_SECRET}
