@@ -28,3 +28,11 @@ jobs:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
         run: |
           flyctl deploy --app trusty-backend
+
+      - name: Escalar memória da VM para 1024MB (opcional)
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          flyctl scale memory 1024 --app trusty-backend          
+          
+          
