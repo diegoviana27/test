@@ -2,18 +2,17 @@ spring:
   application:
     name: Trusty Audit Paperless System
 
-#  datasource:
-#    # URL dinâmica: se não definir DATASOURCE_URL, usa H2 em memória
-#    url: jdbc:h2:mem:trustydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-#    username: sa
-#    password:
-#    driver-class-name: org.h2.Driver
-#    hikari:
-#      maximum-pool-size: 5
-#      minimum-idle: 2
-#      idle-timeout: 30000
-#      max-lifetime: 1800000
-#      leak-detection-threshold: 10000
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/trusty}
+    username: ${DATASOURCE_USERNAME:postgres}
+    password: ${DATASOURCE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      max-lifetime: 60000
+      leak-detection-threshold: 30000
 
   mail:
     host: ${MAIL_HOST}
