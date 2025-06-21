@@ -1,11 +1,11 @@
 app = "trusty-backend"
 
-[env]
-  PORT = "8080"
-  JAVA_OPTS = "-Xmx512m -Xms256m"
 
-[deploy]
-  memory = "512MB"
+[env]
+  JAVA_OPTS = "-Xmx512m"
+
+[experimental]
+  auto_rollback = true
 
 [[services]]
   internal_port = 8080  # <- Corrigido aqui

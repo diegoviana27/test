@@ -2,11 +2,11 @@ spring:
   application:
     name: Trusty Audit Paperless System
 
-#  datasource:
-#    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/trusty}
-#    username: ${DATASOURCE_USERNAME:postgres}
-#    password: ${DATASOURCE_PASSWORD:postgres}
-#    driver-class-name: org.postgresql.Driver
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/trusty}
+    username: ${DATASOURCE_USERNAME:postgres}
+    password: ${DATASOURCE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
 
   mail:
     host: ${MAIL_HOST}
