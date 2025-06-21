@@ -29,7 +29,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	//implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
-	implementation 'com.google.cloud.sql:postgres-socket-factory:1.13.0'
+	// implementation 'com.google.cloud.sql:postgres-socket-factory:1.13.0'
 
 	//implementation "net.logstash.logback:logstash-logback-encoder:${logstashVersion}"
 
